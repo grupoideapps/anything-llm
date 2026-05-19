@@ -55,7 +55,7 @@ export default function SettingsSidebar() {
             <List className="h-6 w-6" />
           </button>
           <div className="flex items-center justify-center flex-grow">
-            <div className="text-2xl font-bold tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-white to-white/60 light:from-gray-900 light:to-gray-600">Crie3 Studio</div>
+            <div className="text-2xl font-bold tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-white to-white/60">Crie3 Studio</div>
           </div>
           <div className="w-12"></div>
         </div>
@@ -81,7 +81,7 @@ export default function SettingsSidebar() {
               {/* Header Information */}
               <div className="flex w-full items-center justify-between gap-x-4">
                 <div className="flex shrink-1 w-fit items-center justify-start">
-                  <div className="text-2xl font-bold tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-white to-white/60 light:from-gray-900 light:to-gray-600">Crie3 Studio</div>
+                  <div className="text-2xl font-bold tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-white to-white/60">Crie3 Studio</div>
                 </div>
                 <div className="flex gap-x-2 items-center text-slate-500 shrink-0">
                   <a
@@ -130,7 +130,7 @@ export default function SettingsSidebar() {
           to={paths.home()}
           className="flex shrink-0 max-w-[55%] items-center justify-start mx-[20.5px] my-[18px]"
         >
-          <div className="text-2xl font-bold tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-white to-white/60 light:from-gray-900 light:to-gray-600">Crie3 Studio</div>
+          <div className="text-2xl font-bold tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-white to-white/60">Crie3 Studio</div>
         </Link>
         <div
           ref={sidebarRef}
