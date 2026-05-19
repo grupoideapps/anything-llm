@@ -4,6 +4,7 @@ import NewWorkspaceModal, {
   useNewWorkspaceModal,
 } from "../Modals/NewWorkspace";
 import ActiveWorkspaces from "./ActiveWorkspaces";
+import useLogo from "@/hooks/useLogo";
 import useUser from "@/hooks/useUser";
 import Footer from "../Footer";
 import SettingsButton from "../SettingsButton";
@@ -17,6 +18,7 @@ import { createPortal } from "react-dom";
 
 export default function Sidebar() {
   const { user } = useUser();
+  const { logo } = useLogo();
   const sidebarRef = useRef(null);
   const { showSidebar, setShowSidebar, canToggleSidebar } = useSidebarToggle();
   const {
@@ -44,7 +46,11 @@ export default function Sidebar() {
           <div className="flex shrink-0 w-full justify-center my-[18px]">
             <div className="flex w-[250px] min-w-[250px]">
               <Link to={paths.home()} aria-label="Home">
-                <div className={`text-2xl font-bold tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-white to-white/60 transition-opacity duration-500 ${showSidebar ? "opacity-100" : "opacity-0"}`}>Crie3 Studio</div>
+                <img
+                  src={logo}
+                  alt="Logo"
+                  className={`rounded max-h-[24px] object-contain transition-opacity duration-500 ${showSidebar ? "opacity-100" : "opacity-0"}`}
+                />
               </Link>
             </div>
           </div>
@@ -75,6 +81,7 @@ export default function Sidebar() {
 }
 
 export function SidebarMobileHeader() {
+  const { logo } = useLogo();
   const sidebarRef = useRef(null);
   const [showSidebar, setShowSidebar] = useState(false);
   const [showBgOverlay, setShowBgOverlay] = useState(false);
@@ -113,7 +120,12 @@ export function SidebarMobileHeader() {
           <List className="h-6 w-6" />
         </button>
         <div className="flex items-center justify-center flex-grow">
-          <div className="text-2xl font-bold tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-white to-white/60">Crie3 Studio</div>
+          <img
+            src={logo}
+            alt="Logo"
+            className="block mx-auto h-6 w-auto"
+            style={{ maxHeight: "40px", objectFit: "contain" }}
+          />
         </div>
         <div className="w-12"></div>
       </div>
@@ -139,7 +151,12 @@ export function SidebarMobileHeader() {
             {/* Header Information */}
             <div className="flex w-full items-center justify-between gap-x-4">
               <div className="flex shrink-1 w-fit items-center justify-start">
-                <div className="text-2xl font-bold tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-white to-white/60">Crie3 Studio</div>
+                <img
+                  src={logo}
+                  alt="Logo"
+                  className="rounded w-full max-h-[40px]"
+                  style={{ objectFit: "contain" }}
+                />
               </div>
               {(!user || user?.role !== "default") && (
                 <div className="flex gap-x-2 items-center text-slate-500 shink-0">
