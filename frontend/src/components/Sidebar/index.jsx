@@ -44,7 +44,7 @@ export default function Sidebar() {
           <div className="flex shrink-0 w-full justify-center my-[18px]">
             <div className="flex w-[250px] min-w-[250px]">
               <Link to={paths.home()} aria-label="Home">
-                <div className={`text-2xl font-bold tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-white to-white/60 transition-opacity duration-500 ${showSidebar ? "opacity-100" : "opacity-0"}`}>Crie3 Studio</div>
+                <div className={`text-2xl font-bold tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-white to-white/60 light:from-gray-900 light:to-gray-600 transition-opacity duration-500 ${showSidebar ? "opacity-100" : "opacity-0"}`}>Crie3 Studio</div>
               </Link>
             </div>
           </div>
@@ -113,7 +113,7 @@ export function SidebarMobileHeader() {
           <List className="h-6 w-6" />
         </button>
         <div className="flex items-center justify-center flex-grow">
-          <div className="text-2xl font-bold tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-white to-white/60">Crie3 Studio</div>
+          <div className="text-2xl font-bold tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-white to-white/60 light:from-gray-900 light:to-gray-600">Crie3 Studio</div>
         </div>
         <div className="w-12"></div>
       </div>
@@ -139,7 +139,7 @@ export function SidebarMobileHeader() {
             {/* Header Information */}
             <div className="flex w-full items-center justify-between gap-x-4">
               <div className="flex shrink-1 w-fit items-center justify-start">
-                <div className="text-2xl font-bold tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-white to-white/60">Crie3 Studio</div>
+                <div className="text-2xl font-bold tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-white to-white/60 light:from-gray-900 light:to-gray-600">Crie3 Studio</div>
               </div>
               {(!user || user?.role !== "default") && (
                 <div className="flex gap-x-2 items-center text-slate-500 shink-0">
